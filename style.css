@@ -1,0 +1,138 @@
+body {
+  font-family: 'Azeret Mono', monospace;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  transition: background 0.5s ease;
+}
+body.dark {
+  background: #333;
+  color: #fff;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.lang {
+  font-size: 1.5rem;
+}
+.lang span {
+  color: #aaa;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.lang span.active {
+  color: #111
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 40px 0;
+}
+.link-container {
+  margin-top: 2rem;
+}
+h3 {
+/* text-align: center; */
+margin-bottom: 1rem;
+}
+.links{
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-gap: 2rem 1rem;
+margin: 2rem 0 3rem;
+/* text-align: center; */
+}
+a {
+color: rgb(22, 74, 82) !important;
+transition: color 0.5s ease;
+}
+body.dark a {
+  color: #ddd !important;
+}
+
+#toggleTheme {
+cursor: pointer;
+margin: 0 0 .5rem;
+display: inline-block;
+height: 30px;
+width: 30px;
+opacity: .8;
+}
+#toggleTheme img {
+height: 100%;
+width: 100%;
+}
+
+.quotes-container {
+position: relative;
+margin-top: 2rem;
+font-size: 1rem;
+font-style: italic;
+/* height: 8rem; */
+padding: 2rem 1rem;
+background: rgba(255,255,255, 0.3);
+}
+#hiddenQuote {
+visibility: hidden;
+padding: .5rem;
+
+}
+body.dark .quotes-container {
+background: rgba(0,0,0, 0.3);
+}
+
+.images {
+margin-top: 4rem;
+display: flex;
+/* flex-wrap: wrap; */
+gap: 1rem;
+
+
+}
+.images a {
+flex: 1 1 0px;
+/* width: 50%; */
+/* height: 170px */
+}
+img {
+max-width: 100%;
+flex: 1 1 0px;
+/* height: 170px */
+}
+@media screen and (max-width: 720px) {
+  .container {
+      padding: 1.2rem;
+  }
+  .links{
+      grid-template-columns: repeat(3, 1fr);
+  }
+  /* .images {
+      grid-template-columns: repeat(2, 1fr);
+  } */
+  .images {
+      display: block;
+  }
+  .images img {
+      width: 100%;
+      height: auto;
+      margin: .2rem 0
+  } 
+}
+@media screen and (max-width: 320px) {
+  .container {
+      padding: 1rem;
+  }
+  .links{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
